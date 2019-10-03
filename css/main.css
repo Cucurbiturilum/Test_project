@@ -160,5 +160,33 @@ header .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 header .show > .btn-outline-primary.dropdown-toggle:focus, header .btn-outline-primary.focus, header .btn-outline-primary:focus {
   box-shadow: none;
 }
+header .social_flow {
+  bottom: 10%;
+}
+header .social_flow a {
+  background-color: #4a4a4a;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  header .social_flow a {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+header .social_flow a:hover {
+  background-color: #efc478;
+  transform: scale(1.15);
+}
+header .social_flow i {
+  color: white;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 1024px) {
+  header .social_flow i {
+    font-size: 1.2rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -48,11 +48,11 @@ header {
       width: 1.6rem;
       height: 1.6rem;
       text-decoration: none;
-    }
 
-    a:hover {
-      background-color: $primary-color;
-      transform: scale(1.3);
+      &:hover {
+        background-color: $primary-color;
+        transform: scale(1.3);
+      }
     }
 
     i {
@@ -210,8 +210,34 @@ header {
 
   @include button;
 
+  .social_flow {
+    bottom: 10%;
 
+    a {
+      background-color: #4a4a4a;
+      width: 1.5rem;
+      height: 1.5rem;
+      text-decoration: none;
+      @media screen and (min-width: 1024px) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      &:hover {
+        background-color: $primary-color;
+        transform: scale(1.15);
+      }
+    }
+    i {
+      color: white;
+      font-size: 0.9rem;
+      @media screen and (min-width: 1024px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
+
+
 
 
 
