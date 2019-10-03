@@ -1,8 +1,6 @@
-header {
-  font-family: Arial, sans-serif;
-}
 header address {
   font-size: 0.75rem;
+  font-family: Arial, sans-serif;
 }
 header address i {
   color: #67b8e8;
@@ -32,6 +30,20 @@ header .nav {
 }
 header .navbar {
   background-color: transparent;
+}
+header .navbar .btn {
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #67b8e8;
+  font: 1rem "Raleway", sans-serif;
+  font-weight: bold;
+  width: 12.3rem;
+}
+header .navbar .btn:hover {
+  color: #67b8e8;
+}
+header .navbar .btn.focus, header .navbar .btn:focus {
+  box-shadow: none;
 }
 header .navbar-light .navbar-brand {
   font: 1.5rem "Pacifico", cursive;
@@ -108,24 +120,45 @@ header .menu--francisco .menu__helper {
   display: block;
   pointer-events: none;
 }
-header .btn {
-  background-color: #fff;
-  text-transform: uppercase;
-  color: #67b8e8;
-  font: 1rem "Raleway", sans-serif;
-  font-weight: bold;
-  width: 12.3rem;
-}
-header .btn:hover {
-  color: #67b8e8;
-}
-header .btn.focus, header .btn:focus {
-  box-shadow: none;
-}
 header .contact a {
   width: 2rem;
   height: 2rem;
   background-color: #fff;
+}
+header h1 {
+  font: 2rem "Raleway", sans-serif;
+  color: #67b8e8;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+header h1 span {
+  font-weight: bold;
+}
+header .contact_us, header .btn-outline-primary:not(:disabled):not(.disabled).active, header .btn-outline-primary:not(:disabled):not(.disabled):active,
+header .show > .btn-outline-primary.dropdown-toggle, header .btn-outline-primary:hover {
+  width: 17rem;
+  color: #67b8e8;
+  font: 1.6rem "Raleway", sans-serif;
+  border: 2px solid #67b8e8;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fff;
+}
+@media screen and (max-width: 500px) {
+  header .contact_us, header .btn-outline-primary:not(:disabled):not(.disabled).active, header .btn-outline-primary:not(:disabled):not(.disabled):active,
+header .show > .btn-outline-primary.dropdown-toggle, header .btn-outline-primary:hover {
+    width: 14rem;
+    margin-bottom: 1rem;
+  }
+}
+header .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+header .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+header .show > .btn-outline-primary.dropdown-toggle:focus, header .btn-outline-primary.focus, header .btn-outline-primary:focus {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=main.css.map */
