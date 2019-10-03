@@ -1,4 +1,4 @@
-$main-font:  'Raleway', sans-serif;
+$main-font: 'Raleway', sans-serif;
 $main-color: #67b8e8;
 $primary-color: #efc478;
 
@@ -7,13 +7,16 @@ header {
 
   address {
     font-size: 0.75rem;
+
     i {
       color: $main-color;
       font-size: 0.7rem;
     }
-    a, a:hover{
+
+    a, a:hover {
       text-decoration: none;
       color: black;
+      cursor: pointer;
     }
   }
 
@@ -27,7 +30,7 @@ header {
 
     a:hover {
       background-color: $primary-color;
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
 
     i {
@@ -35,7 +38,127 @@ header {
     }
   }
 
+  .nav {
+    background-color: $main-color;
+    box-shadow: 0 2px 7px -2px #6F6F6F;
+  }
 
+  .navbar {
+    background-color: transparent;
+  }
+
+  .navbar-light .navbar-brand {
+    font: 1.5rem 'Pacifico', cursive;
+    color: white;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    text-transform: uppercase;
+    color: white;
+    font: 1rem $main-font;
+    font-weight: bold;
+  }
+
+  .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: white;
+  }
+
+  .menu {
+    margin: 0;
+  }
+
+  .menu--francisco .menu__item {
+    margin: 0;
+  }
+
+  .menu--francisco .menu__link {
+    position: relative;
+    overflow: hidden;
+    height: 3em;
+    padding: 1em 0;
+    color: #b5b5b5;
+    text-align: right;
+    transition: color 0.3s;
+  }
+
+  .menu--francisco .menu__link:hover,
+  .menu--francisco .menu__link:focus {
+    color: #929292;
+  }
+
+  .menu--francisco .menu__item--current .menu__link {
+    color: #ffffff;
+  }
+
+  .menu--francisco .menu__link:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    width: 30%;
+    height: 2px;
+    opacity: 0;
+    background: #ffffff;
+    transform: translate3d(0, -3em, 0);
+    transition: transform 0s 0.3s, opacity 0.2s;
+    @media screen and (min-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  .menu--francisco .menu__item--current .menu__link::before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s, opacity 0.1s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu--francisco .menu__helper {
+    display: block;
+    pointer-events: none;
+  }
+
+  .menu--francisco .menu__item--current .menu__helper {
+    animation: anim-francisco 0.3s forwards;
+  }
+
+  header .navbar-light .navbar-brand:focus, header .navbar-light .navbar-brand:hover {
+    outline: none;
+  }
+
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+  }
+
+  .btn {
+    background-color: #fff;
+    text-transform: uppercase;
+    color: $main-color;
+    font: 1rem $main-font;
+    font-weight: bold;
+    width: 12.3rem;
+  }
+
+  .btn:hover {
+    color: $main-color;
+  }
+
+  .btn.focus, .btn:focus {
+    box-shadow: none;
+  }
+
+  .contact {
+    a {
+      width: 2rem;
+      height: 2rem;
+      background-color: #fff;
+    }
+  }
 }
 
 
