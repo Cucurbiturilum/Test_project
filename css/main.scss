@@ -1,0 +1,42 @@
+$main-font:  'Raleway', sans-serif;
+$main-color: #67b8e8;
+$primary-color: #efc478;
+
+header {
+  font-family: Arial, sans-serif;
+
+  address {
+    font-size: 0.75rem;
+    i {
+      color: $main-color;
+      font-size: 0.7rem;
+    }
+    a, a:hover{
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .social {
+    a {
+      background-color: #4a4a4a;
+      width: 1.6rem;
+      height: 1.6rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: $primary-color;
+      transform: scale(1.2);
+    }
+
+    i {
+      color: white;
+    }
+  }
+
+
+}
+
+
+
