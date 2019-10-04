@@ -126,6 +126,10 @@ header .contact a {
   height: 2rem;
   background-color: #fff;
 }
+header .contact a:hover {
+  text-decoration: none;
+  color: #67b8e8;
+}
 header h1 {
   font: 2rem "Raleway", sans-serif;
   color: #67b8e8;
@@ -194,7 +198,6 @@ header .social_flow i {
 
 .success {
   background-color: #f9f9f9;
-  /* Добавление отступов к элементу с классом timeline */
 }
 .success h2 {
   font: 1.8rem "Raleway", sans-serif;
@@ -204,8 +207,6 @@ header .social_flow i {
   padding-top: 1rem;
   padding-bottom: 1rem;
   position: relative;
-  /* Создание вертикальной линии с помощью псевдоэлеметна */
-  /* добавление нижнего отступа и левого поля для элементов с классом timeline-wrapper */
 }
 .success .timeline:before {
   content: "";
@@ -215,11 +216,9 @@ header .social_flow i {
   background-color: #000000;
   left: 2rem;
   top: 0;
-  /* для адаптивности (стили для больших экранов) */
 }
 @media (min-width: 576px) {
   .success .timeline:before {
-    /* для вывода вертикальной линии по центру */
     left: 50%;
   }
 }
@@ -228,24 +227,21 @@ header .social_flow i {
   border: solid black;
   border-width: 0 5px 5px 0;
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 50px;
+  height: 50px;
   transform: rotate(45deg);
   position: absolute;
-  left: 0.7rem;
-  bottom: 0.3%;
+  left: 0.6rem;
+  bottom: 0.4%;
 }
 @media (min-width: 576px) {
   .success .timeline:after {
-    /* для вывода вертикальной линии по центру */
-    left: 48.6%;
+    left: calc(50% - 22.5px);
   }
 }
 .success .timeline .timeline-wrapper {
   margin-bottom: 1rem;
   padding-left: 4rem;
-  /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
-  /* стили для элементов таймлайна */
 }
 @media (min-width: 576px) {
   .success .timeline .timeline-wrapper {
@@ -254,7 +250,6 @@ header .social_flow i {
 }
 @media (min-width: 576px) {
   .success .timeline .timeline-wrapper:nth-child(odd) {
-    /* стили для нечётных элементов с классом timeline-wrapper */
     padding-right: 2rem;
     padding-left: 15px;
   }
@@ -273,7 +268,6 @@ header .social_flow i {
 }
 @media (min-width: 576px) {
   .success .timeline .timeline-wrapper:nth-child(even) {
-    /* стили для чётных элементов с классом timeline-wrapper */
     padding-left: 2rem;
     margin-left: 50%;
     margin-top: -2rem;
@@ -366,6 +360,10 @@ header .social_flow i {
   font: 1.8rem "Raleway", sans-serif;
   font-weight: bold;
 }
+.references .card .card-img {
+  border: 2px solid #67b8e8;
+  border-radius: 12px;
+}
 .references .card .card-img-overlay {
   width: 8.8rem;
   height: 8.8rem;
@@ -378,7 +376,7 @@ header .social_flow i {
 .references .card .card-img-overlay:hover {
   width: 100%;
   height: 100%;
-  border-radius: 0;
+  border-radius: 12px;
 }
 .references .card .card-img-overlay:hover .logo {
   display: none;
@@ -392,6 +390,33 @@ header .social_flow i {
 .references .card .card-img-overlay:hover .hover a {
   display: block;
   font-weight: normal;
+}
+.references p {
+  font: 1.25rem "Open Sans", sans-serif;
+  color: #67b8e8;
+}
+.references h3 {
+  font: 1.9rem "Raleway", sans-serif;
+  color: #67b8e8;
+  font-weight: bold;
+}
+.references .options .btn {
+  width: 17.6rem;
+  line-height: 2;
+  font: 1.6rem "Raleway", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.references .options .btn:first-of-type {
+  background-color: #67b8e8;
+}
+.references .options .btn:last-of-type {
+  background-color: #efc478;
+}
+.references .options .btn:focus {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -193,6 +193,10 @@ header {
       width: 2rem;
       height: 2rem;
       background-color: #fff;
+      &:hover{
+        text-decoration: none;
+        color:$main-color;
+      }
     }
   }
 
@@ -249,12 +253,11 @@ header {
     font-weight: bold;
   }
 
-  /* Добавление отступов к элементу с классом timeline */
   .timeline {
     padding-top: 1rem;
     padding-bottom: 1rem;
     position: relative;
-    /* Создание вертикальной линии с помощью псевдоэлеметна */
+
     &:before {
       content: "";
       position: absolute;
@@ -263,9 +266,7 @@ header {
       background-color: #000000;
       left: 2rem;
       top: 0;
-      /* для адаптивности (стили для больших экранов) */
       @media (min-width: 576px) {
-        /* для вывода вертикальной линии по центру */
         left: 50%;
       }
     }
@@ -275,30 +276,26 @@ header {
       border: solid black;
       border-width: 0 5px 5px 0;
       display: inline-block;
-      width: 3rem;
-      height: 3rem;
+      width: 50px;
+      height: 50px;
       transform: rotate(45deg);
       position: absolute;
-      left: 0.7rem;
-      bottom: 0.3%;
+      left: 0.6rem;
+      bottom: 0.4%;
       @media (min-width: 576px) {
-        /* для вывода вертикальной линии по центру */
-        left: 48.6%;
+        left: calc(50% - 22.5px);
       }
     }
 
-    /* добавление нижнего отступа и левого поля для элементов с классом timeline-wrapper */
     .timeline-wrapper {
       margin-bottom: 1rem;
       padding-left: 4rem;
       @media (min-width: 576px) {
         margin-bottom: -3rem;
       }
-      /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
 
       &:nth-child(odd) {
         @media (min-width: 576px) {
-          /* стили для нечётных элементов с классом timeline-wrapper */
           padding-right: 2rem;
           padding-left: 15px;
         }
@@ -320,7 +317,6 @@ header {
 
       &:nth-child(even) {
         @media (min-width: 576px) {
-          /* стили для чётных элементов с классом timeline-wrapper */
           padding-left: 2rem;
           margin-left: 50%;
           margin-top: -2rem;
@@ -339,7 +335,6 @@ header {
         }
       }
 
-      /* стили для элементов таймлайна */
       .timeline-item {
         position: relative;
         font-family: $main-font;
@@ -395,7 +390,6 @@ header {
   }
 }
 
-
 .connect {
   background-color: #f9f9f9;
   @include button;
@@ -411,28 +405,38 @@ header {
     font-weight: bold;
   }
 
-  .card{
-    .card-img-overlay{
+  .card {
+    .card-img {
+      border: 2px solid $main-color;
+      border-radius: 12px;
+    }
+
+    .card-img-overlay {
       width: 8.8rem;
       height: 8.8rem;
       border-radius: 50%;
       background-color: rgba(224, 225, 226, .7);
-      .hover{
+
+      .hover {
         display: none;
       }
-      &:hover{
+
+      &:hover {
         width: 100%;
         height: 100%;
-        border-radius: 0;
-        .logo{
+        border-radius: 12px;
+
+        .logo {
           display: none;
         }
-        .hover{
+
+        .hover {
           display: block;
           text-transform: uppercase;
           font: 1rem/1.5 $main-font;
           font-weight: bold;
-          a{
+
+          a {
             display: block;
             font-weight: normal;
           }
@@ -440,4 +444,40 @@ header {
       }
     }
   }
+
+  p {
+    font: 1.25rem "Open Sans", sans-serif;
+    color: $main-color;
+  }
+
+  h3 {
+    font: 1.9rem $main-font;
+    color: $main-color;
+    font-weight: bold;
+  }
+
+  .options {
+    .btn {
+      width: 17.6rem;
+      line-height: 2;
+      font: 1.6rem $main-font;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:first-of-type {
+        background-color: $main-color;
+      }
+
+      &:last-of-type {
+        background-color: $primary-color;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
 }
