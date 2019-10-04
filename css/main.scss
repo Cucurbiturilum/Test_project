@@ -193,9 +193,10 @@ header {
       width: 2rem;
       height: 2rem;
       background-color: #fff;
-      &:hover{
+
+      &:hover {
         text-decoration: none;
-        color:$main-color;
+        color: $main-color;
       }
     }
   }
@@ -480,4 +481,11 @@ header {
     }
   }
 
+}
+
+.customers {
+  h2 {
+    font: 1.8rem $main-font;
+    font-weight: bold;
+  }
 }

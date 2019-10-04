@@ -419,4 +419,9 @@ header .social_flow i {
   box-shadow: none;
 }
 
+.customers h2 {
+  font: 1.8rem "Raleway", sans-serif;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=main.css.map */
