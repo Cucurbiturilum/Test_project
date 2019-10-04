@@ -214,14 +214,34 @@ header .social_flow i {
     left: 50%;
   }
 }
+.timeline:after {
+  content: "";
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0.7rem;
+  bottom: 0.3%;
+}
+@media (min-width: 576px) {
+  .timeline:after {
+    /* для вывода вертикальной линии по центру */
+    left: 48.6%;
+  }
+}
 .timeline .timeline-wrapper {
   margin-bottom: 1rem;
   padding-left: 4rem;
   /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
   /* стили для элементов таймлайна */
 }
-.timeline .timeline-wrapper:last-child {
-  margin-bottom: 0;
+@media (min-width: 576px) {
+  .timeline .timeline-wrapper {
+    margin-bottom: -3rem;
+  }
 }
 @media (min-width: 576px) {
   .timeline .timeline-wrapper:nth-child(odd) {
@@ -237,6 +257,12 @@ header .social_flow i {
   }
 }
 @media (min-width: 576px) {
+  .timeline .timeline-wrapper:nth-child(odd) .timeline-item:after {
+    left: unset;
+    right: 2rem;
+  }
+}
+@media (min-width: 576px) {
   .timeline .timeline-wrapper:nth-child(even) {
     /* стили для чётных элементов с классом timeline-wrapper */
     padding-left: 2rem;
@@ -244,13 +270,25 @@ header .social_flow i {
     margin-top: -2rem;
   }
 }
+.timeline .timeline-wrapper:nth-child(3) .timeline-item h3, .timeline .timeline-wrapper:nth-child(4) .timeline-item h3 {
+  color: #67b8e8;
+}
+.timeline .timeline-wrapper:nth-child(3) .timeline-item:after, .timeline .timeline-wrapper:nth-child(4) .timeline-item:after {
+  background-color: #67b8e8;
+}
 .timeline .timeline-wrapper .timeline-item {
   position: relative;
-  color: #000000;
-  padding: 0.825rem;
-  border-radius: 0.25rem;
+  font-family: "Raleway", sans-serif;
   /* добавление контрольных точек на вертикальную линию */
   /* добавление стрелочек к элементам таймлайна */
+}
+.timeline .timeline-wrapper .timeline-item h3 {
+  color: #efc478;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.timeline .timeline-wrapper .timeline-item p {
+  font-size: 1rem;
 }
 .timeline .timeline-wrapper .timeline-item:before {
   content: "";
@@ -273,15 +311,6 @@ header .social_flow i {
   left: 2rem;
   top: 50%;
   transform: translateY(-50%);
-}
-
-/* для адаптивности (стили для больших экранов) */
-@media (min-width: 576px) {
-  /* стили для псевдоэлементов ::after элементов таймлайна, расположенных в нечётных контейнерах */
-  .timeline-wrapper:nth-child(odd) .timeline-item::after {
-    left: unset;
-    right: 2rem;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
