@@ -145,6 +145,7 @@ header .show > .btn-outline-primary.dropdown-toggle, header .btn-outline-primary
   color: #67b8e8;
   font: 1.6rem "Raleway", sans-serif;
   border: 2px solid #67b8e8;
+  border-radius: 10px;
   text-transform: uppercase;
   font-weight: bold;
   background-color: #fff;
@@ -163,6 +164,7 @@ header .show > .btn-outline-primary.dropdown-toggle:focus, header .btn-outline-p
 }
 header .social_flow {
   bottom: 10%;
+  z-index: 1;
 }
 header .social_flow a {
   background-color: #4a4a4a;
@@ -190,15 +192,22 @@ header .social_flow i {
   }
 }
 
-/* Добавление отступов к элементу с классом timeline */
-.timeline {
+.success {
+  background-color: #f9f9f9;
+  /* Добавление отступов к элементу с классом timeline */
+}
+.success h2 {
+  font: 1.8rem "Raleway", sans-serif;
+  font-weight: bold;
+}
+.success .timeline {
   padding-top: 1rem;
   padding-bottom: 1rem;
   position: relative;
   /* Создание вертикальной линии с помощью псевдоэлеметна */
   /* добавление нижнего отступа и левого поля для элементов с классом timeline-wrapper */
 }
-.timeline:before {
+.success .timeline:before {
   content: "";
   position: absolute;
   width: 5px;
@@ -209,12 +218,12 @@ header .social_flow i {
   /* для адаптивности (стили для больших экранов) */
 }
 @media (min-width: 576px) {
-  .timeline:before {
+  .success .timeline:before {
     /* для вывода вертикальной линии по центру */
     left: 50%;
   }
 }
-.timeline:after {
+.success .timeline:after {
   content: "";
   border: solid black;
   border-width: 0 5px 5px 0;
@@ -227,70 +236,70 @@ header .social_flow i {
   bottom: 0.3%;
 }
 @media (min-width: 576px) {
-  .timeline:after {
+  .success .timeline:after {
     /* для вывода вертикальной линии по центру */
     left: 48.6%;
   }
 }
-.timeline .timeline-wrapper {
+.success .timeline .timeline-wrapper {
   margin-bottom: 1rem;
   padding-left: 4rem;
   /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
   /* стили для элементов таймлайна */
 }
 @media (min-width: 576px) {
-  .timeline .timeline-wrapper {
+  .success .timeline .timeline-wrapper {
     margin-bottom: -3rem;
   }
 }
 @media (min-width: 576px) {
-  .timeline .timeline-wrapper:nth-child(odd) {
+  .success .timeline .timeline-wrapper:nth-child(odd) {
     /* стили для нечётных элементов с классом timeline-wrapper */
     padding-right: 2rem;
     padding-left: 15px;
   }
 }
 @media (min-width: 576px) {
-  .timeline .timeline-wrapper:nth-child(odd) .timeline-item:before {
+  .success .timeline .timeline-wrapper:nth-child(odd) .timeline-item:before {
     right: -2.2rem;
     left: unset;
   }
 }
 @media (min-width: 576px) {
-  .timeline .timeline-wrapper:nth-child(odd) .timeline-item:after {
+  .success .timeline .timeline-wrapper:nth-child(odd) .timeline-item:after {
     left: unset;
     right: 2rem;
   }
 }
 @media (min-width: 576px) {
-  .timeline .timeline-wrapper:nth-child(even) {
+  .success .timeline .timeline-wrapper:nth-child(even) {
     /* стили для чётных элементов с классом timeline-wrapper */
     padding-left: 2rem;
     margin-left: 50%;
     margin-top: -2rem;
   }
 }
-.timeline .timeline-wrapper:nth-child(3) .timeline-item h3, .timeline .timeline-wrapper:nth-child(4) .timeline-item h3 {
+.success .timeline .timeline-wrapper:nth-child(3) .timeline-item h3, .success .timeline .timeline-wrapper:nth-child(4) .timeline-item h3 {
   color: #67b8e8;
 }
-.timeline .timeline-wrapper:nth-child(3) .timeline-item:after, .timeline .timeline-wrapper:nth-child(4) .timeline-item:after {
+.success .timeline .timeline-wrapper:nth-child(3) .timeline-item:after, .success .timeline .timeline-wrapper:nth-child(4) .timeline-item:after {
   background-color: #67b8e8;
 }
-.timeline .timeline-wrapper .timeline-item {
+.success .timeline .timeline-wrapper .timeline-item {
   position: relative;
   font-family: "Raleway", sans-serif;
   /* добавление контрольных точек на вертикальную линию */
   /* добавление стрелочек к элементам таймлайна */
 }
-.timeline .timeline-wrapper .timeline-item h3 {
+.success .timeline .timeline-wrapper .timeline-item h3 {
   color: #efc478;
   font-size: 1.25rem;
   font-weight: bold;
 }
-.timeline .timeline-wrapper .timeline-item p {
+.success .timeline .timeline-wrapper .timeline-item p {
   font-size: 1rem;
 }
-.timeline .timeline-wrapper .timeline-item:before {
+.success .timeline .timeline-wrapper .timeline-item:before {
   content: "";
   position: absolute;
   width: 4.25rem;
@@ -300,7 +309,7 @@ header .social_flow i {
   top: 50%;
   transform: translateY(-50%);
 }
-.timeline .timeline-wrapper .timeline-item:after {
+.success .timeline .timeline-wrapper .timeline-item:after {
   content: "";
   position: absolute;
   width: 0.9rem;
@@ -311,6 +320,78 @@ header .social_flow i {
   left: 2rem;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.motivation {
+  background-image: url(../images/motvation.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.motivation p {
+  font: 1.25rem "Open Sans", sans-serif;
+  color: white;
+}
+
+.connect {
+  background-color: #f9f9f9;
+}
+.connect .contact_us, .connect .btn-outline-primary:not(:disabled):not(.disabled).active, .connect .btn-outline-primary:not(:disabled):not(.disabled):active,
+.connect .show > .btn-outline-primary.dropdown-toggle, .connect .btn-outline-primary:hover {
+  width: 17rem;
+  color: #67b8e8;
+  font: 1.6rem "Raleway", sans-serif;
+  border: 2px solid #67b8e8;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fff;
+}
+@media screen and (max-width: 500px) {
+  .connect .contact_us, .connect .btn-outline-primary:not(:disabled):not(.disabled).active, .connect .btn-outline-primary:not(:disabled):not(.disabled):active,
+.connect .show > .btn-outline-primary.dropdown-toggle, .connect .btn-outline-primary:hover {
+    width: 14rem;
+    margin-bottom: 1rem;
+  }
+}
+.connect .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.connect .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.connect .show > .btn-outline-primary.dropdown-toggle:focus, .connect .btn-outline-primary.focus, .connect .btn-outline-primary:focus {
+  box-shadow: none;
+}
+.connect .btn, .connect .btn:hover, .connect .btn:focus {
+  background-color: transparent;
+}
+
+.references h2 {
+  font: 1.8rem "Raleway", sans-serif;
+  font-weight: bold;
+}
+.references .card .card-img-overlay {
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 50%;
+  background-color: rgba(224, 225, 226, 0.7);
+}
+.references .card .card-img-overlay .hover {
+  display: none;
+}
+.references .card .card-img-overlay:hover {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.references .card .card-img-overlay:hover .logo {
+  display: none;
+}
+.references .card .card-img-overlay:hover .hover {
+  display: block;
+  text-transform: uppercase;
+  font: 1rem/1.5 "Raleway", sans-serif;
+  font-weight: bold;
+}
+.references .card .card-img-overlay:hover .hover a {
+  display: block;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=main.css.map */

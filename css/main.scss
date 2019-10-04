@@ -8,6 +8,7 @@ $primary-color: #efc478;
     color: $main-color;
     font: 1.6rem $main-font;
     border: 2px solid $main-color;
+    border-radius: 10px;
     text-transform: uppercase;
     font-weight: bold;
     background-color: #fff;
@@ -212,6 +213,7 @@ header {
 
   .social_flow {
     bottom: 10%;
+    z-index: 1;
 
     a {
       background-color: #4a4a4a;
@@ -239,134 +241,203 @@ header {
   }
 }
 
+.success {
+  background-color: #f9f9f9;
 
-/* Добавление отступов к элементу с классом timeline */
-.timeline {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  position: relative;
-  /* Создание вертикальной линии с помощью псевдоэлеметна */
-  &:before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background-color: #000000;
-    left: 2rem;
-    top: 0;
-    /* для адаптивности (стили для больших экранов) */
-    @media (min-width: 576px) {
-      /* для вывода вертикальной линии по центру */
-      left: 50%;
-    }
-  }
-  &:after{
-    content: "";
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    width: 3rem;
-    height: 3rem;
-    transform: rotate(45deg);
-    position: absolute;
-    left: 0.7rem;
-    bottom: 0.3%;
-    @media (min-width: 576px) {
-      /* для вывода вертикальной линии по центру */
-      left: 48.6%;
-    }
+  h2 {
+    font: 1.8rem $main-font;
+    font-weight: bold;
   }
 
-  /* добавление нижнего отступа и левого поля для элементов с классом timeline-wrapper */
-  .timeline-wrapper {
-    margin-bottom: 1rem;
-    padding-left: 4rem;
-    @media (min-width: 576px){
-      margin-bottom: -3rem;
-    }
-    /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
-
-    &:nth-child(odd) {
+  /* Добавление отступов к элементу с классом timeline */
+  .timeline {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    /* Создание вертикальной линии с помощью псевдоэлеметна */
+    &:before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      background-color: #000000;
+      left: 2rem;
+      top: 0;
+      /* для адаптивности (стили для больших экранов) */
       @media (min-width: 576px) {
-        /* стили для нечётных элементов с классом timeline-wrapper */
-        padding-right: 2rem;
-        padding-left: 15px;
-      }
-
-      .timeline-item:before {
-        @media (min-width: 576px) {
-          right: -2.2rem;
-          left: unset;
-        }
-      }
-
-      .timeline-item:after {
-        @media (min-width: 576px) {
-          left: unset;
-          right: 2rem;
-        }
+        /* для вывода вертикальной линии по центру */
+        left: 50%;
       }
     }
 
-    &:nth-child(even) {
+    &:after {
+      content: "";
+      border: solid black;
+      border-width: 0 5px 5px 0;
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 0.7rem;
+      bottom: 0.3%;
       @media (min-width: 576px) {
-        /* стили для чётных элементов с классом timeline-wrapper */
-        padding-left: 2rem;
-        margin-left: 50%;
-        margin-top: -2rem;
+        /* для вывода вертикальной линии по центру */
+        left: 48.6%;
       }
     }
 
-    &:nth-child(3),&:nth-child(4) {
-      .timeline-item{
-        h3{
-          color: $main-color;
+    /* добавление нижнего отступа и левого поля для элементов с классом timeline-wrapper */
+    .timeline-wrapper {
+      margin-bottom: 1rem;
+      padding-left: 4rem;
+      @media (min-width: 576px) {
+        margin-bottom: -3rem;
+      }
+      /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
+
+      &:nth-child(odd) {
+        @media (min-width: 576px) {
+          /* стили для нечётных элементов с классом timeline-wrapper */
+          padding-right: 2rem;
+          padding-left: 15px;
+        }
+
+        .timeline-item:before {
+          @media (min-width: 576px) {
+            right: -2.2rem;
+            left: unset;
+          }
+        }
+
+        .timeline-item:after {
+          @media (min-width: 576px) {
+            left: unset;
+            right: 2rem;
+          }
         }
       }
-      .timeline-item:after {
-        background-color: $main-color;
-      }
-    }
 
-    /* стили для элементов таймлайна */
-    .timeline-item {
-      position: relative;
-      font-family: $main-font;
-      h3{
-        color: $primary-color;
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
-      p{
-        font-size: 1rem;
-      }
-      /* добавление контрольных точек на вертикальную линию */
-      &:before {
-        content: "";
-        position: absolute;
-        width: 4.25rem;
-        height: 5px;
-        background-color: #000000;
-        left: -2.0rem;
-        top: 50%;
-        transform: translateY(-50%);
+      &:nth-child(even) {
+        @media (min-width: 576px) {
+          /* стили для чётных элементов с классом timeline-wrapper */
+          padding-left: 2rem;
+          margin-left: 50%;
+          margin-top: -2rem;
+        }
       }
 
-      /* добавление стрелочек к элементам таймлайна */
-      &:after {
-        content: "";
-        position: absolute;
-        width: .9rem;
-        height: .9rem;
-        background-color: $primary-color;
-        border: 3px solid black;
-        border-radius: .4rem;
-        left: 2rem;
-        top: 50%;
-        transform: translateY(-50%);
+      &:nth-child(3), &:nth-child(4) {
+        .timeline-item {
+          h3 {
+            color: $main-color;
+          }
+        }
+
+        .timeline-item:after {
+          background-color: $main-color;
+        }
+      }
+
+      /* стили для элементов таймлайна */
+      .timeline-item {
+        position: relative;
+        font-family: $main-font;
+
+        h3 {
+          color: $primary-color;
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        /* добавление контрольных точек на вертикальную линию */
+        &:before {
+          content: "";
+          position: absolute;
+          width: 4.25rem;
+          height: 5px;
+          background-color: #000000;
+          left: -2.0rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        /* добавление стрелочек к элементам таймлайна */
+        &:after {
+          content: "";
+          position: absolute;
+          width: .9rem;
+          height: .9rem;
+          background-color: $primary-color;
+          border: 3px solid black;
+          border-radius: .4rem;
+          left: 2rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
     }
   }
 }
 
+.motivation {
+  background-image: url(../images/motvation.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 
+  p {
+    font: 1.25rem 'Open Sans', sans-serif;
+    color: white;
+  }
+}
+
+
+.connect {
+  background-color: #f9f9f9;
+  @include button;
+
+  .btn, .btn:hover, .btn:focus {
+    background-color: transparent;
+  }
+}
+
+.references {
+  h2 {
+    font: 1.8rem $main-font;
+    font-weight: bold;
+  }
+
+  .card{
+    .card-img-overlay{
+      width: 8.8rem;
+      height: 8.8rem;
+      border-radius: 50%;
+      background-color: rgba(224, 225, 226, .7);
+      .hover{
+        display: none;
+      }
+      &:hover{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        .logo{
+          display: none;
+        }
+        .hover{
+          display: block;
+          text-transform: uppercase;
+          font: 1rem/1.5 $main-font;
+          font-weight: bold;
+          a{
+            display: block;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
