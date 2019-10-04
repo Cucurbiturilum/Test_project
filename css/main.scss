@@ -222,11 +222,13 @@ header {
         width: 2.5rem;
         height: 2.5rem;
       }
+
       &:hover {
         background-color: $primary-color;
         transform: scale(1.15);
       }
     }
+
     i {
       color: white;
       font-size: 0.9rem;
@@ -238,6 +240,102 @@ header {
 }
 
 
+/* Добавление отступов к элементу с классом timeline */
+.timeline {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  /* Создание вертикальной линии с помощью псевдоэлеметна */
+  &:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #000000;
+    left: 2rem;
+    top: 0;
+    /* для адаптивности (стили для больших экранов) */
+    @media (min-width: 576px) {
+      /* для вывода вертикальной линии по центру */
+      left: 50%;
+    }
+  }
+
+  /* добавление нижнего отступа и левого поля для элементов с классом timeline-wrapper */
+  .timeline-wrapper {
+    margin-bottom: 1rem;
+    padding-left: 4rem;
+    /* убирание у последнего элемента .timeline-wrapper нижнего отступа */
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      @media (min-width: 576px) {
+        /* стили для нечётных элементов с классом timeline-wrapper */
+        padding-right: 2rem;
+        padding-left: 15px;
+      }
+      .timeline-item:before{
+        @media (min-width: 576px){
+          right: -2.2rem;
+          left: unset;
+        }
+      }
+    }
+    &:nth-child(even){
+      @media (min-width: 576px) {
+        /* стили для чётных элементов с классом timeline-wrapper */
+        padding-left: 2rem;
+        margin-left: 50%;
+        margin-top: -2rem;
+      }
+
+    }
+
+    /* стили для элементов таймлайна */
+    .timeline-item {
+      position: relative;
+      color: #000000;
+      padding: .825rem;
+      border-radius: .25rem;
+      /* добавление контрольных точек на вертикальную линию */
+      &:before {
+        content: "";
+        position: absolute;
+        width: 4.25rem;
+        height: 5px;
+        background-color: #000000;
+        left: -2.0rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* добавление стрелочек к элементам таймлайна */
+      &:after {
+        content: "";
+        position: absolute;
+        width: .9rem;
+        height: .9rem;
+        background-color: $primary-color;
+        border: 3px solid black;
+        border-radius: .4rem;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
 
 
+/* для адаптивности (стили для больших экранов) */
+@media (min-width: 576px) {
 
+
+  /* стили для псевдоэлементов ::after элементов таймлайна, расположенных в нечётных контейнерах */
+  .timeline-wrapper:nth-child(odd) .timeline-item::after {
+    left: unset;
+    right: 2rem;
+  }
+}
