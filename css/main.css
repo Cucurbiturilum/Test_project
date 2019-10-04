@@ -424,4 +424,70 @@ header .social_flow i {
   font-weight: bold;
 }
 
+.guestbook {
+  background-image: url(../images/guestbook_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.guestbook h2 {
+  font: 1.8rem "Raleway", sans-serif;
+  font-weight: bold;
+}
+.guestbook .person {
+  width: 9rem;
+  height: 9rem;
+}
+.guestbook h3 {
+  font: 1.6rem "Raleway", sans-serif;
+  font-weight: bold;
+}
+.guestbook p {
+  font: 1.25rem "Raleway", sans-serif;
+}
+@media (min-width: 576px) {
+  .guestbook .carousel-control-prev {
+    left: -7rem;
+  }
+}
+@media (min-width: 576px) {
+  .guestbook .carousel-control-next {
+    right: -7rem;
+  }
+}
+
+.society form .form-group .input-group-prepend .input-group-text {
+  background-color: transparent;
+  border-left: none;
+}
+.society .list-unstyled p {
+  font: 1.25rem "Open Sans", sans-serif;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+footer h4 {
+  font: 1.2rem Pacifico, sans-serif;
+}
+footer p {
+  font: 1rem "Open Sans", sans-serif;
+}
+footer .social_net a {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+footer .social_net a:hover {
+  text-decoration: none;
+}
+footer .social_net a i {
+  color: black;
+}
+footer .navigation a {
+  color: white;
+  text-decoration: none;
+  font: 1rem "Open Sans", sans-serif;
+}
+
 /*# sourceMappingURL=main.css.map */

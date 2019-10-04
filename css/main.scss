@@ -489,3 +489,101 @@ header {
     font-weight: bold;
   }
 }
+
+.guestbook {
+  background-image: url(../images/guestbook_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h2 {
+    font: 1.8rem $main-font;
+    font-weight: bold;
+  }
+
+  .person {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  h3 {
+    font: 1.6rem $main-font;
+    font-weight: bold;
+  }
+
+  p {
+    font: 1.25rem $main-font;
+  }
+
+  .carousel-control-prev {
+    @media (min-width: 576px) {
+      left: -7rem;
+    }
+  }
+
+  .carousel-control-next {
+    @media (min-width: 576px) {
+      right: -7rem;
+    }
+  }
+
+}
+
+.society {
+  form {
+    .form-group {
+
+      .form-control {
+      }
+
+      .input-group-prepend {
+        .input-group-text {
+          background-color: transparent;
+          border-left: none;
+        }
+      }
+    }
+  }
+
+  .list-unstyled {
+    p {
+      font: 1.25rem "Open Sans", sans-serif;
+    }
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+
+  h4 {
+    font: 1.2rem Pacifico, sans-serif;
+  }
+
+  p {
+    font: 1rem "Open Sans", sans-serif;
+  }
+
+  .social_net {
+    a {
+      width: 25px;
+      height: 25px;
+      background-color: #fff;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      i {
+        color: black;
+      }
+    }
+  }
+
+  .navigation {
+    a {
+      color: white;
+      text-decoration: none;
+      font: 1rem "Open Sans", sans-serif;
+    }
+  }
+}
