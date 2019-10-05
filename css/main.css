@@ -455,11 +455,68 @@ header .social_flow i {
   }
 }
 
+.society form .form-group {
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #eeeeee;
+}
+.society form .form-group:hover {
+  border-color: #67b8e8;
+}
+.society form .form-group .form-control {
+  border-radius: 10px;
+  color: #67b8e8;
+  padding-left: 1rem;
+  background-color: #eeeeee;
+}
+.society form .form-group .form-control:focus {
+  box-shadow: none;
+}
 .society form .form-group .input-group-prepend .input-group-text {
   background-color: transparent;
-  border-left: none;
 }
-.society .list-unstyled p {
+.society form .form-group .input-group-prepend .input-group-text i {
+  color: #67b8e8;
+}
+.society form .form-check {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+.society form .form-check span {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid black;
+  background-color: #fff;
+  margin-right: 0.5rem;
+}
+.society form .form-check [type=checkbox]:checked + span:before {
+  content: "✓";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  font-size: 1.5rem;
+  color: #67b8e8;
+}
+.society form .form-check .form-check-label {
+  padding-left: 1rem;
+  padding-right: 3rem;
+  font: 1rem/2 "Open Sans", sans-serif;
+}
+.society form .btn-primary {
+  background-color: #67b8e8;
+  width: 10rem;
+  border-radius: 10px;
+}
+.society form .btn-primary:not(:disabled):not(.disabled).active, .society form .btn-primary:not(:disabled):not(.disabled):active,
+.society form .btn-primary .show > .btn-primary.dropdown-toggle {
+  background-color: #67b8e8;
+  box-shadow: none;
+}
+.society form textarea {
+  height: 11rem;
+}
+.society form .list-unstyled p {
   font: 1.25rem "Open Sans", sans-serif;
 }
 
