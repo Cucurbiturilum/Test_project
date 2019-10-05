@@ -530,15 +530,15 @@ footer h4 {
 footer p {
   font: 1rem "Open Sans", sans-serif;
 }
-footer .social_net a {
+footer .social-net a {
   width: 25px;
   height: 25px;
   background-color: #fff;
 }
-footer .social_net a:hover {
+footer .social-net a:hover {
   text-decoration: none;
 }
-footer .social_net a i {
+footer .social-net a i {
   color: black;
 }
 footer .navigation a {
