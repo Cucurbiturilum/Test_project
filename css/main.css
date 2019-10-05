@@ -457,7 +457,7 @@ header .social_flow i {
 
 .society form .form-group {
   border-radius: 10px;
-  border: 1px solid black;
+  border: 2px solid #c0c0c0;
   background-color: #eeeeee;
 }
 .society form .form-group:hover {
@@ -479,21 +479,21 @@ header .social_flow i {
   color: #67b8e8;
 }
 .society form .form-check {
-  border: 1px solid black;
+  border: 2px solid #c0c0c0;
   border-radius: 10px;
   background-color: #eeeeee;
 }
 .society form .form-check span {
   width: 1.25rem;
   height: 1.25rem;
-  border: 1px solid black;
+  border: 1px solid #c0c0c0;
   background-color: #fff;
   margin-right: 0.5rem;
 }
 .society form .form-check [type=checkbox]:checked + span:before {
   content: "✓";
   position: absolute;
-  top: -9px;
+  top: -10px;
   left: 0;
   font-size: 1.5rem;
   color: #67b8e8;
